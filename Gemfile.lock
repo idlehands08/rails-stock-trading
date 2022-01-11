@@ -300,7 +300,7 @@ DEPENDENCIES
   rspec-rails
   rubocop-rails
   rubocop-rspec
-  sass-rails
+  sass-rails (>= 6)
   shoulda-matchers
   spring
   spring-watcher-listen (~> 2.0.0)
