@@ -1,26 +1,18 @@
--# = form_with model: @user do |f|
-= form_with scope: :user, url: admins_new_user_path, method: :post do |f|
-
-  - if @user.errors.any?
-    %h2 Errors: 
-    %ul
-      - @user.errors.full_messages.each do |message|
-        %li= message
-
-  = f.label :email
-  = f.text_field :email
-  %br
-  = f.label :first_name
-  = f.text_field :first_name
-  %br
-  = f.label :last_name
-  = f.text_field :last_name
-  %br
-  = f.label :password
-  = f.password_field :password
-  -# %br
-  -# = f.label :password_confirmation
-  -# = f.password_field :password_confirmation
-  %br
-  %button
-    = f.submit "Create Account"
+%div{ class: 'w-screen h-screen max-w-full max-h-full text-gray-50 bg-gray-900 bg-no-repeat bg-cover flex flex-col items-center justify-center', 
+        style: "background-image: url(finance.jpg)"}
+  
+  %div{class:"flex flex-col py-20 gap-2 px-32 bg-gray-500 flex flex-col items-center justify-center rounded"}
+    %h2{class:"font-bold text-3xl mb-10"} Create New User Account
+    = form_with scope: :user, url: admins_new_user_path, method: :post do |f|
+      - if @user.errors.any?
+        %h2 Errors: 
+        %ul
+          - @user.errors.full_messages.each do |message|
+            %li= message
+      %div{class:"flex flex-col items-center justify-center gap-4 text-gray-800"}
+        = f.text_field :email, class: 'rounded w-80', placeholder: "Email"
+        = f.text_field :first_name, class: 'rounded w-80', placeholder: "First Name"
+        = f.text_field :last_name, class: 'rounded w-80', placeholder: "Last Name"
+        = f.password_field :password, class: 'rounded w-80', placeholder: "Password"
+        %button{class:"mt-10 rounded bg-blue-500 px-5 py-2 w-full text-white font-bold cursor-pointer"}
+          = f.submit "Create Account", class: 'cursor-pointer'

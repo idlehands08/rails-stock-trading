@@ -1,40 +1,34 @@
-%div{ class: 'flex flex-col items-center justify-center bg-gray-800 text-gray-50 w-screen h-screen p-20'}
+%div{class: 'px-8 w-screen flex flex-col items-center pt-20 bg-gray-50 gap-10'}
   - if admin_signed_in?
-    %table
-      %thead
+    %h1{class:'text-3xl'} Users List
+    %table{:class => "w-full py-22 table text-gray-900 text-sm"}
+      %thead{:class => "bg-gray-50 text-gray-500"}
         %tr
-          %th Email
-          %th First Name
-          %th Last Name
-          %th Balance
+          %th{:class => "p-3 center"} Email
+          %th{:class => "p-3 center"} First Name
+          %th{:class => "p-3 center"} Last Name
+          %th{:class => "p-3 center"} Balance
       %tbody
         - @users.each do |user|
-          %tr
-            %td= user.email
-            %td= user.first_name
-            %td= user.last_name
-            %td
+          %tr{:class => "bg-white text-center border border-solid border-gray-300 outline-none shadow drop-shadow-xl"}
+            %td{:class => "p-3 text-xl font-bold"}= user.email
+            %td{:class => "p-3"}= user.first_name
+            %td{:class => "p-3"}= user.last_name
+            %td{:class => "p-3"}
               - if user.wallet
                 = user.wallet.balance
-            %td
+            %td{:class => 'font-bold text-blue-500'}
               = link_to user_profile_path(user.id) do
-                show
-            %td
+                SHOW
+            %td{:class => 'font-bold text-blue-500'}
               = link_to edit_user_profile_path(user.id) do
-                edit
+                EDIT
             -# %td
             -#   = link_to user_path(user.id), method: :delete, data: {confirm: "Are you sure?"} do
             -#     delete
-
-    %br
-    %br
-    %button
+    %button{:class => 'bg-blue-500 px-8 py-2 text-white font-bold rounded w-80'}
       = link_to admins_new_user_path do
-        New User
-    %button
-      = link_to 'Sign Out', destroy_admin_session_path, method: :delete, class: "test"
-    %br
-    %br
+        Create New User Account
   - else 
     = link_to 'Admin Registration', new_admin_registration_path
     %br
