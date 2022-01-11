@@ -4,7 +4,7 @@ module StockDataFinder
   class Client
     # symbols='AAPL,ADBE,AMD,AMZN,CRM,GOOG,FB,JPM,TSLA,MA,MSFT,NEE,NVDA,SBUX,UNH,V,WMT'
     #  SYMBOLS = 'AAPL,AMZN,GOOG,MSFT,NVDA,TSLA,MA,JPM,WMT,V,NEE,UNH,CRM,ADBE,AMD,FB,SBUX,SQ,HD,MCD,PYPL,BA,NFLX,NOW'
-     SYMBOLS = 'NVDA,TSLA,SBUX,'
+     SYMBOLS = 'NEE,UNH,CRM'
       def self.price_update
             response = Request.call(http_method: 'get', endpoint:"/v1/data/quote?symbols=#{SYMBOLS}")
             if !response.nil?
