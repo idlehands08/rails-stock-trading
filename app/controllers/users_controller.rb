@@ -4,6 +4,7 @@ class UsersController < ApplicationController
       @holdings = current_user.stock_holding.order('stock_symbol ASC')              
       @name = current_user.first_name + ' ' + current_user.last_name  
       @join_date = current_user.created_at.to_date  
+      @randomJoke = JokeAPI::Client.any
 
       if current_user.wallet
         @balance = current_user.wallet.balance
@@ -15,6 +16,10 @@ class UsersController < ApplicationController
 
   def show
     # @user = User.find(params[:id])
+  end
+
+  def joke
+    @randomJoke = JokeAPI::Client.programming
   end
 
   # def destroy
