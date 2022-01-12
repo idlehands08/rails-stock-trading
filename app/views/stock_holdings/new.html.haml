@@ -23,7 +23,8 @@
         = f.hidden_field :t_type, value: 'BUY'
         %div{class: 'flex flex-col items-center gap-4 w-80' }
           = f.number_field :amount, autofocus: true, class: 'text-gray-600 rounded w-full', placeholder: "Price", step: :any, min: 0.1, :required => true
-          %button{ class: 'font-bold text-white rounded py-2 w-full bg-green-500 transition-ease duration-200 hover:opacity-70' }= f.submit "Buy", class: "", data: {confirm: "Confirm to buy this stock"}
+          %div{class: 'font-bold text-white rounded py-2 w-full bg-green-500 transition-ease duration-200 hover:opacity-70'}
+            = f.submit "Buy", class: "w-full", data: {confirm: "Confirm to buy this stock"}
 
     %div{ class: 'flex flex-col items-center gap-4 '}
       %h1{ class: 'text-xl' }= "SELL PRICE - PHP #{@sell}"
@@ -35,6 +36,7 @@
         = f.hidden_field :t_type, value: 'SELL'
         %div{class: 'flex flex-col items-center gap-4 w-80' }
           = f.number_field :units, class: 'text-gray-600 rounded w-full' ,placeholder: "Sell in Units", step: :any, min: 0.0
-          %button{ class: 'font-bold text-white rounded py-2 w-full bg-red-500 transition-ease duration-200 hover:opacity-70' }= f.submit "Sell", class: "", data: {confirm: "Confirm to sell this stock"}
+          %div{class: 'font-bold text-white rounded py-2 w-full bg-red-500 transition-ease duration-200 hover:opacity-70'}
+            = f.submit "Sell", class: "w-full", data: {confirm: "Confirm to sell this stock"}
 
   -# ADD SELL ALL SO USER CAN DESTROY A STOCK HOLDING
