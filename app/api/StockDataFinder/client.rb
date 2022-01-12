@@ -1,5 +1,3 @@
-require 'json'
-
 module StockDataFinder
   class Client
     # symbols='AAPL,ADBE,AMD,AMZN,CRM,GOOG,FB,JPM,TSLA,MA,MSFT,NEE,NVDA,SBUX,UNH,V,WMT'
@@ -21,12 +19,12 @@ module StockDataFinder
         end
         def self.display_stocks
             response = Request.call(http_method: 'get', endpoint:"/v1/data/quote?symbols=#{SYMBOLS}")
-            if !response.nil?
+            if response[:code] == 402
+                p "You have exceeded daily api request limit"
+            else  
                 response[:data]["data"].map do |stock_info|
                     p "#{stock_info['ticker']} - #{stock_info['price']}USD"
                 end
-            else
-                p 'Error connectiong to StockData.org'
             end
         end
     end
