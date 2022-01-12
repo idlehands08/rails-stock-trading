@@ -2,17 +2,31 @@ require 'rails_helper'
 
 RSpec.describe "Admins", type: :feature do
 
-  describe 'View all users' do
-    # before {visit admin_root_path}
+  let(:admin) { create(:admin) }
 
-    # it 'shows all articles in the body' do
-    #   within 'body' do
-    #     expect(page).to have_content('New User')
-    #     expect(page).to have_content('Email')
+  describe 'When admin is not signed in' do
 
-    #   end
-    # end
-  # end
+    before {visit admin_root_path}
+
+    it 'should show sign in when admin not signed in' do
+      within 'body' do
+        expect(page).to have_content('SIGN IN')
+      end
+    end
+  end
+
+  describe 'When admin is signed in' do
+
+    before {sign_in admin}
+
+    it 'should show New User button and Emails' do
+      visit admin_root_path
+      within 'body' do
+        expect(page).to have_content('Create New User Account')
+        expect(page).to have_content('Email')
+      end
+    end
+  end
 
   # describe 'View the new article form' do
   #   before {visit new_article_path}
@@ -34,6 +48,6 @@ RSpec.describe "Admins", type: :feature do
   #     expect(page).to have_content('An article was successfully created')
 
   #   end
-  end
+  # end
 
 end
