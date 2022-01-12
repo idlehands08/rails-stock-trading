@@ -32,5 +32,7 @@ module RailsProject
     config.generators.system_tests = nil
     config.assets.enabled = true
     config.assets.paths  << Rails.root.join('/app/assets/fonts')
+
+    config.assets.css_compressor = nil
   end
 end
