@@ -36,19 +36,3 @@
       %p
         Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
       = link_to "Back", :back
-
--# %div{ class: 'w-screen h-screen max-w-full max-h-full bg-gray-50 text-gray-900 bg-no-repeat bg-cover flex flex-col items-center justify-center'}
--#   %div{ class: 'flex flex-col py-20 gap-2 px-32 bg-gray-500 flex flex-col items-center justify-center rounded'}
--#     %h2.{ class:'font-bold text-3xl mb-10'}Change Password
--#     = form_for(resource, as: resource_name, url: registration_path(resource_name)), html: { method: :put } do |f|
--#       = render "users/shared/error_messages", resource: resource
--#       %div{ class: 'flex flex-col items-center justify-center gap-4 text-gray-800'}
--#         = f.email_field :email, placeholder: 'Email',autofocus: true, autocomplete: email, :class = rounded w-80
--#         = f.text_field :first_name, placeholder: 'First Name', autofocus: true, autocomplete: first name, :class = rounded w-80
--#         = f.text_field :last_name, placeholder: Last Name, autofocus: true, autocomplete: last name, :class = rounded w-80
--#         = f.password_field :password, placeholder: Password, autocomplete: new-password, :class = rounded w-80
--#         = f.password_field :password_confirmation, placeholder: Password Confirmation, autocomplete: new-password, :class = rounded w-80
--#       %button.mt-10.rounded.bg-blue-800.px-5.py-2.w-full= f.submit Sign up
--#     .mt-8.flex.flex-col.items-center.justify-center
--#       %h3 Already have an account?
--#       = render devise/shared/links
