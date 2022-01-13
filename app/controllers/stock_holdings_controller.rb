@@ -90,7 +90,7 @@ class StockHoldingsController < ApplicationController
       # Current holdings units - to the amount of units the user entered/typed
       @holding.units -= params[:stock_holding][:units].to_f
       # if no more units available, remove it from the user's database
-      if @holding.units.zero?
+      if @holding.units < 0.001
         @holding.destroy
       else
         @holding.save
