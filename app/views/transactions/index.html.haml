@@ -10,5 +10,5 @@
     - @transactions.each do |transaction|
       %div{ class: 'items-center justify-center text-center w-full flex gap-32 py-2 border-b border-t border-solid border-gray-300 outline-none text-sm rounded bg-white rounded drop-shadow-2xl'}
         = transaction.created_at.strftime("%b %d, %Y, %H:%M:%S")
-        SGT
+        UTC+08:00
         = logs_format(transaction)

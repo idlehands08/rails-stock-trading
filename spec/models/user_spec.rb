@@ -22,4 +22,11 @@ RSpec.describe User, type: :model do
       expect(user).not_to be_valid
     end
   end
+
+  # context 'User creates wallet' do
+  #   it 'user create wallet of 100.000' do
+  #     user = User.new(email: 'test@example.com', encrypted_password: '123123', first_name: 'test', last_name: 'test')
+  #     expect(user.wallet).not_to be_nil
+  #   end
+  # end
 end
