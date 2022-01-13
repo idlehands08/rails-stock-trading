@@ -47,10 +47,10 @@ class StockHoldingsController < ApplicationController
         # create buy transaction for the user
         create_transaction_buy(@holding.units)
         flash[:notice] = "You successfully bought the stock"
-        redirect_to users_path
+        redirect_to root_path
       else
         flash[:alert] = "Please double check all payment information and try again."
-        redirect_back fallback_location: users_path
+        redirect_back fallback_location: root_path
       end
     else
       # Update if the stock is already owned by the current user
@@ -72,10 +72,10 @@ class StockHoldingsController < ApplicationController
         # create buy transaction for the user
         create_transaction_buy(units)
         flash[:notice] = "You successfully bought the stock"
-        redirect_to users_path
+        redirect_to root_path
       else
         flash[:alert] = "Please double check all payment information and try again."
-        redirect_back fallback_location: users_path
+        redirect_back fallback_location: root_path
       end
     end
   end
@@ -84,7 +84,7 @@ class StockHoldingsController < ApplicationController
     # if the user have the current stock in the user's stock holdings
     if stock_avail.nil? || stock_avail.units < params[:stock_holding][:units].to_f
       flash[:alert] = "Please double check if you have enough units and try again."
-      redirect_back fallback_location: users_path
+      redirect_back fallback_location: root_path
     else
       @holding = stock_avail
       # Current holdings units - to the amount of units the user entered/typed
@@ -106,7 +106,7 @@ class StockHoldingsController < ApplicationController
       @user_wallet.balance = current_user.wallet.balance + params[:stock_holding][:units].to_f * params[:stock_holding][:stock_price].to_f
       @user_wallet.save
       flash[:notice] = "You successfully sold the stock"
-      redirect_to users_path
+      redirect_to root_path
     end
   end
 

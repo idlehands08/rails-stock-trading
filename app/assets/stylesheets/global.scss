@@ -1,6 +1,10 @@
 @font-face {
   font-family: "Roboto", sans-serif;
-  src: url("/assets/Roboto-Regular.ttf");
+  src: url("/assets/Roboto-Regular");
+}
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow'
 }
 
 .header-padding {

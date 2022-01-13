@@ -2,6 +2,11 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   context 'When creating users, ' do
+    it 'must be valid when all fields are filled up properly' do
+      user = User.new(email: 'test@test.com', password: '123123', first_name: 'test', last_name: 'test')
+      expect(user).to be_valid
+    end
+    
     it 'email must not be null' do
       user = User.new(email: nil, encrypted_password: '123123', first_name: 'test', last_name: 'test')
       expect(user).not_to be_valid
@@ -22,11 +27,4 @@ RSpec.describe User, type: :model do
       expect(user).not_to be_valid
     end
   end
-
-  # context 'User creates wallet' do
-  #   it 'user create wallet of 100.000' do
-  #     user = User.new(email: 'test@example.com', encrypted_password: '123123', first_name: 'test', last_name: 'test')
-  #     expect(user.wallet).not_to be_nil
-  #   end
-  # end
 end
