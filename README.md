@@ -1,9 +1,9 @@
 <div id="top"></div>
 
-[![Contributors][contributors-shield]][contributors-url]
+<!-- [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Issues][issues-shield]][issues-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![LinkedIn][linkedin-shield]][linkedin-url] -->
 
 <!-- PROJECT LOGO -->
 <br />
@@ -26,17 +26,27 @@ A basic stock trading application where users can imitate buying and selling of 
 <div>
 
 #### View our Demo
+
 #### USER links
-#### link 1 - https://morning-lake-07067.herokuapp.com/  
+
+#### link 1 - https://morning-lake-07067.herokuapp.com/
+
 #### link 2 - https://damp-thicket-05193.herokuapp.com/
+
 #### Email: test@user.com
+
 #### Password: 123123
+
 </br>
 
-#### ADMIN links 
-#### link 1 - https://morning-lake-07067.herokuapp.com/admins/sign_in  
+#### ADMIN links
+
+#### link 1 - https://morning-lake-07067.herokuapp.com/admins/sign_in
+
 #### link 2 - https://damp-thicket-05193.herokuapp.com/admins/sign_in
-#### Email: admin@test.com 
+
+#### Email: admin@test.com
+
 #### Password: 123123
 
 </br>
@@ -51,20 +61,23 @@ A basic stock trading application where users can imitate buying and selling of 
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
+      <ul>
+        <li><a href="#built-with">Version</a></li>
+      </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
+      </ul>
+      <ul>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Features</a></li>
+    <li><a href="#screenshots">Screenshots</a></li>
+    <li><a href="#features">Features</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -147,8 +160,6 @@ To get a local copy up and running follow these simple example steps.
 
 ![StockMarketListScreenshot.png](app/assets/images/screenshots/AdminHome.png)
 
-
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Features
@@ -156,15 +167,15 @@ To get a local copy up and running follow these simple example steps.
 - User can Register and use a Trader account
   - to Buy and Sell Stocks
   - to change their password  
-  -to view their transaction logs (buy and sell transaction history)   
+    -to view their transaction logs (buy and sell transaction history)
 - User can use an admin account
   - to create a new trader account and add them to the app
   - to view all users currently registered on the app
-  - view specific user to show his/her details 
-  - to edit user details 
+  - view specific user to show his/her details
+  - to edit user details
 - Restful API features/functions
   - Get and display Stock Market News from https://marketaux.com -- integrated by idlehands08 / Geoff
-  - Get and display recent  Stock Prices from  https://Stockdata.org -- integrated by idlehands08 / Geoff
+  - Get and display recent Stock Prices from https://Stockdata.org -- integrated by idlehands08 / Geoff
   - Get and display random jokes from https://sv443.net/jokeapi/v2/ -- integrated by kobato13 / JC
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -192,7 +203,7 @@ Don't forget to give the project a star! Thanks again!
 
 John Carlo Martinez - [LinkedIn](https://www.linkedin.com/in/john-carlo-martinez-18177314a/) - johncarlomartinez13@gmail.com
 
-Geoff Dagamac - geofftd08@gmail.com 
+Geoff Dagamac - geofftd08@gmail.com
 
 Project Link: [https://github.com/idlehands08/stock-trading-app](https://github.com/idlehands08/stock-trading-app)
 

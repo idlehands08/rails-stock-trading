@@ -6,11 +6,11 @@ RSpec.describe "Admins", type: :feature do
 
   describe 'When admin is not signed in' do
 
-    before {visit admin_root_path}
+    before {visit new_admin_session_path}
 
     it 'should show sign in when admin not signed in' do
       within 'body' do
-        expect(page).to have_content('SIGN IN')
+        expect(page).to have_content('Admin Sign In')
       end
     end
   end
