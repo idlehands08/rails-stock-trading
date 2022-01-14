@@ -7,10 +7,20 @@ module.exports = {
   ],
 darkMode: false, // or 'media' or 'class'
 theme: {
-  extend: {},
+  extend: {
+    colors: {
+      'stock-gold': '#F1A208',
+      'stock-teal': '#558599',
+      'stock-black': '#2D2D2A',
+      'stock-green': '#488B49',
+      'light-blue': colors.lightblue,
+      'cyan': colors.cyan,
+    },
+  },
 },
 variants: {
-  extend: {},
+  extend: {
+  },
 },
 plugins: [],
 }

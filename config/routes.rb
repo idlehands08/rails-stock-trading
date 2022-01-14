@@ -42,7 +42,7 @@ Rails.application.routes.draw do
   end
 
   get '/page-not-found', action: :error_page, controller: 'home'
-  
+  get 'news', to: 'html_pages#news'
   # get 'home/index'
   root to: "home#index"
   get '*path', to: 'home#error_page'

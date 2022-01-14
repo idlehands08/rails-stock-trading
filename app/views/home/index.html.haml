@@ -1,6 +1,6 @@
 - if user_signed_in?
   %div{ class: 'bg-gray-50 w-screen h-screen max-w-full max-h-full bg-no-repeat bg-cover flex flex-col text-gray-800 px-20' }
-    %div{ class: 'pt-20 w-full flex flex-col gap-20 flex flex-col items-center justify-center'}
+    %div{ class: 'pt-20 w-full flex flex-col gap-10 flex flex-col items-center justify-center'}
       %h1{ class: 'text-3xl' } Welcome, #{@name}
       %div{ class: 'items-center justify-center text-center w-full flex gap-32 py-10 pb-20 border-b border-solid border-gray-300 outline-none text-sm rounded bg-white rounded drop-shadow-2xl'}
         %div{ class: 'flex flex-col gap-4'}
@@ -29,10 +29,11 @@
             %td{:class => "text-base font-bold text-blue-500 text-center hover:cursor-pointer"}
               %button{class:'bg-blue-500 text-white px-8 py-1 rounded transition-ease duration-200 hover:opacity-75 '}= link_to "View", new_user_stock_holding_path(user_id:current_user, stock_id:sh.stock_id)
 - else  
-  %div{ class: 'flex flex-col items-center justify-center h-full w-full max-w-full max-h-full bg-no-repeat bg-cover flex flex-col text-gray-800', 
-  :style => "background-image: url(#{image_path "finance.jpg"})" }
-    %h1{ class: 'm-5 text-5xl font-bold text-white' } Welcome to StockBro
-    %h2{ class: 'mb-5 text-3xl text-white' } Your market companion
-    %div{ class: 'flex flex-col items-center gap-4' }
-      %button{ class: 'mt-10 px-8 py-2 text-xl font-bold bg-yellow-500 rounded text-white w-80' }= link_to 'Create New Account', new_user_registration_path 
+  %div{ class: 'flex flex-col items-center justify-center h-full w-full max-w-full max-h-full bg-no-repeat bg-cover flex flex-col text-gray-800'}
+    %div{class: 'w-2/5'}
+      = image_tag "RoboStockAvatar3.png", :class => 'w-full'
+    -# %h1{ class: 'text-5xl font-bold text-stock-gold' } Trading made easy
+    %h2{ class: 'mb-5 text-5xl text-blue-400 font-bold' }Welcome to RoboStock
+    %div{ class: 'flex flex-row items-center justify-center gap-4' }
+      %button{ class: 'px-8 py-2 text-xl font-bold bg-blue-400 rounded text-white w-80' }= link_to 'Create New Account', new_user_registration_path 
       %button{ class: 'px-8 py-2 text-xl font-bold bg-gray-500 rounded text-white w-80' }= link_to 'SIGN IN', new_user_session_path 

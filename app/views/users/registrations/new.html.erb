@@ -1,8 +1,6 @@
-<div class='w-screen h-screen max-w-full max-h-full text-gray-50 bg-gray-900 bg-no-repeat bg-cover flex flex-col items-center justify-center', 
-        style="background-image: url(finance.jpg)" >
-
-  <div class="flex flex-col py-20 gap-2 px-32 bg-gray-500 flex flex-col items-center justify-center rounded">
-    <h2 class="font-bold text-3xl mb-10 " >CREATE ACCOUNT</h2>
+<div class='w-screen h-screen max-w-full w-full max-h-full text-gray-50 bg-white bg-no-repeat bg-cover flex flex-row items-center justify-center' >
+  <div class="relative left-24 flex flex-col py-20 gap-2 px-32  bg-gray-200 flex flex-col items-center justify-center rounded drop-shadow-2xl shadow-2xl">
+    <h2 class="font-bold text-blue-500 text-3xl mb-10 " >CREATE ACCOUNT</h2>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "users/shared/error_messages", resource: resource %>
 
@@ -13,12 +11,16 @@
           <%= f.password_field :password, placeholder: "Password", autocomplete: "new-password", :class => "rounded w-80"  %>
           <%= f.password_field :password_confirmation, placeholder: "Password Confirmation", autocomplete: "new-password", :class => "rounded w-80" %>
       </div>
-        <button class="mt-10 rounded bg-blue-800 px-5 py-2 w-full"><%= f.submit "Sign up" %></button>
+        <button class="mt-10 rounded bg-blue-500 px-5 py-2 w-full"><%= f.submit "Sign up" %></button>
     <% end %>
-    <div class="mt-8 flex flex-col items-center justify-center">
+    <div class="mt-8 flex flex-col text-gray-800 items-center justify-center">
       <h3>Already have an account?</h3>
       <%= render "devise/shared/links" %>
     </div>
+  </div>
+
+  <div class="w-1/5 z-10">
+    <%= image_tag "RoboStockAvatarSideRight.png", :class => 'w-full ' %>
   </div>
 
 
