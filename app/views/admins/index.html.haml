@@ -1,4 +1,4 @@
-%div{class: 'px-8 flex flex-col items-center pt-20 gap-10'}
+%div{class: 'w-screen h-screen px-8 flex flex-col items-center pt-20 gap-10'}
   - if admin_signed_in?
     %h1{class:'text-3xl'} Users List
     %table{:class => "w-full py-22 table text-gray-900 text-sm"}
@@ -26,13 +26,14 @@
             -# %td
             -#   = link_to user_path(user.id), method: :delete, data: {confirm: "Are you sure?"} do
             -#     delete
-    %button{:class => 'bg-blue-500 px-8 py-2 text-white font-bold rounded w-80'}
+    %button{:class => 'bg-blue-500 px-8 py-2 text-white font-bold rounded w-80 transition-ease duration-200 hover:opacity-50'}
       = link_to admins_new_user_path do
         Create New User Account
   - else
-    %h1{class: 'text-3xl font-bold text-white'}Admin Panel
+    %h1{class: 'text-3xl font-bold text-gray-800 shadow-2xl'}Admin Control Panel
+    %div{ class: 'w-1/5 z-10'} 
+    = image_tag "RoboStockAvatarPoint.png", :class => 'w-1/4 '
+    %h1{class: 'relative bottom-32 text-5xl font-bold shadow-2xl'}RoboStock
     %div{class: 'flex flex-row items-center justify-center gap-8'}
-      %button{ class: 'mt-10 px-8 py-2 text-xl font-bold bg-yellow-500 rounded text-white w-80' }
-        = link_to 'Admin Registration', new_admin_registration_path
-      %button{ class: 'mt-10 px-8 py-2 text-xl font-bold bg-blue-500 rounded text-white w-80 cursor-pointer hover:opacity-80' }
+      %button{ class: ' px-8 py-2 text-xl font-bold bg-blue-500 rounded text-white w-80 cursor-pointer hover:opacity-80 shadow-2xl' }
         = link_to 'SIGN IN', new_admin_session_path

@@ -16,7 +16,6 @@ Rails.application.routes.draw do
 
   devise_scope :admin do
     get 'admins/sign_out' => 'devise/sessions#destroy'
-    get 'admins', to: 'admins#index', as: :admin_root
     
     # get '/admins/new_user', to: 'admins#new'
     # post '/admins/new_user', to: 'admins#create'
@@ -39,6 +38,7 @@ Rails.application.routes.draw do
     patch 'admins/user/:id', to: 'admins#update_user'
     get 'admins/user/:id/edit', to: 'admins#edit_user', as: :edit_user_profile
     get 'admins/transactions', to: 'admins#transactions', as: :transactions_list
+    get 'admins', to: 'admins#index', as: :admin_root
   end
 
   get '/page-not-found', action: :error_page, controller: 'home'

@@ -6,42 +6,42 @@
   <%# Start of User Only Nav Links %>
   <% if user_signed_in? %> 
     <div class="flex flex-row w-full justify-between h-full">
-        <%= image_tag "RoboStockLogo.png", :class => ' h-full'%>
+        <%= image_tag "RoboStockLogo.png", :class => 'h-full'%>
       <div class="flex flex-row gap-4">
-        <div class="flex flex-col items-center justify-center">
+        <div class="flex flex-col items-center justify-center transform transition duration-200 hover:scale-125">
           <%= link_to root_path do %>
           <i class="fas fa-home"></i>
           <% end %>
           <h3 class="text-sm">Home</h3>
         </div>
-        <div class="flex flex-col items-center justify-center">
+        <div class="flex flex-col items-center justify-center transform transition duration-200 hover:scale-125">
           <%= link_to users_path do %>
           <i class="fas fa-user"></i>
           <% end %>
           <h3 class="text-sm">Account</h3>
         </div>
-        <div class="flex flex-col items-center justify-center">
+        <div class="flex flex-col items-center justify-center transform transition duration-200 hover:scale-125">
           <%= link_to stocks_path do %>
           <i class="far fa-chart-bar"></i>
           <% end %>
           <h3 class="text-sm">Market</h3>
         </div>
-        <div class="flex flex-col items-center justify-center">
+        <div class="flex flex-col items-center justify-center transform transition duration-200 hover:scale-125">
           <%= link_to transactions_path do %>
           <i class="fas fa-file-invoice-dollar"></i>
           <% end %>
           <h3 class="text-sm">Logs</h3>
         </div>
       </div>
-      <button class="font-bold text-base"><%= link_to "LOGOUT", destroy_user_session_path, method: :delete %></button>
+      <button class="font-bold text-base transition-ease duration-200 hover:opacity-70"><%= link_to "LOGOUT", destroy_user_session_path, method: :delete %></button>
     </div>
   <% else %>
       <div class="flex flex-row w-full justify-between h-full">
         <%= image_tag "RoboStockLogo.png", :class => ' h-full'%>
       </div>
       <div class="flex flex-row gap-4">
-        <button class="justify-end font-bold text-base"><%= link_to "LOGIN", new_user_session_path %></button>
-        <button class="justify-end font-bold text-base rounded bg-blue-500 w-52 px-8 "><%= link_to "SIGN UP", new_user_registration_path  %></button>
+        <button class="justify-end font-bold text-base transition-ease duration-200 hover:opacity-70"><%= link_to "LOGIN", new_user_session_path %></button>
+        <button class="justify-end font-bold text-base rounded bg-blue-500 w-52 px-8 transition-ease duration-200 hover:opacity-70"><%= link_to "SIGN UP", new_user_registration_path  %></button>
       </div>
   <% end %>
 <% else %>
@@ -67,13 +67,13 @@
         <span class="text-xl"> - </span>
         <span class="text-xl"><%= name %></span>
       </div>
-      <button class="font-bold text-base"><%= link_to "LOGOUT", destroy_admin_session_path, method: :delete %></button>
+      <button class="font-bold text-base transition-ease duration-200 hover:opacity-70"><%= link_to "LOGOUT", destroy_admin_session_path, method: :delete %></button>
     </div>
   <% else %>
-    <div class="flex flex-row absolute left-4 top-4">
-      <h1>StockBro</h1> 
+    <div class="flex flex-row w-full justify-between h-full">
+        <%= image_tag "RoboStockLogo.png", :class => 'h-full'%>
     </div>
-    <button class="justify-end font-bold text-base px-8 py-2"><%= link_to "LOGIN", new_admin_session_path %></button>
+    <button class="justify-end font-bold text-base px-8 py-2 transition-ease duration-200 hover:opacity-70"><%= link_to "LOGIN", new_admin_session_path %></button>
   <% end %>
 <% end %>
 </div>

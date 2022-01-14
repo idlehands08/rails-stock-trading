@@ -2,34 +2,46 @@
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="app/assets/images/RoboStockLogo.png" alt="Logo" width="200" height=auto>
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">RoboStock Trading App</h3>
 
   <p align="center">
-    project_description
+A basic stock trading application where users can imitate buying and selling of stocks from the stock market.
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/idlehands08/stock-trading-app"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
   </p>
 </div>
 
+<div>
+
+#### View our Demo
+#### USER links
+#### link 1 - https://morning-lake-07067.herokuapp.com/  
+#### link 2 - https://damp-thicket-05193.herokuapp.com/
+#### Email: test@user.com
+#### Password: 123123
+</br>
+
+#### ADMIN links 
+#### link 1 - https://morning-lake-07067.herokuapp.com/admins/sign_in  
+#### link 2 - https://damp-thicket-05193.herokuapp.com/admins/sign_in
+#### Email: admin@test.com 
+#### Password: 123123
+
+</br>
+</br>
+</div>
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -48,7 +60,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#roadmap">Features</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -60,9 +72,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-This is a Stock Trading Application for educational purpose
+    RoboStock is a trading app that was created by the developers to practice and learn how to develop web applications using Ruby on Rails. Users can buy and sell stocks that are available on the application by creating a new trader account. They can also manage all existing users by logging into an admin account. RoboStock also has some additional API features such as displaying up to date stock market news, prices and even displaying random jokes.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -88,17 +98,11 @@ This is a Stock Trading Application for educational purpose
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-
-- npm
-  ```sh
-  npm install npm@latest -g
-  ```
+- Must have Ruby on Rails installed on your system in order to edit the app
 
 ### Installation
 
@@ -131,22 +135,37 @@ This is an example of how to list things you need to use the software and how to
 
 ## Screenshots
 
-![StockBro (1)](app/assets/images/finance.jpg)
+![StockBroScreenshot.png](app/assets/images/screenshots/HomeLoggedOut.png)
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+![StockBroScreenshot.png](app/assets/images/screenshots/HomeLoggedIn.png)
+
+![StockMarketListScreenshot.png](app/assets/images/screenshots/StockMarketList.png)
+
+![StockMarketListScreenshot.png](app/assets/images/screenshots/TransactionLogs.png)
+
+![StockMarketListScreenshot.png](app/assets/images/screenshots/BuySellStock.png)
+
+![StockMarketListScreenshot.png](app/assets/images/screenshots/AdminHome.png)
+
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- ROADMAP -->
+## Features
 
-## Roadmap
-
-- [] Feature 1
-- [] Feature 2
-- [] Feature 3
-  - [] Nested Feature
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+- User can Register and use a Trader account
+  - to Buy and Sell Stocks
+  - to change their password  
+  -to view their transaction logs (buy and sell transaction history)   
+- User can use an admin account
+  - to create a new trader account and add them to the app
+  - to view all users currently registered on the app
+  - view specific user to show his/her details 
+  - to edit user details 
+- Restful API features/functions
+  - Get and display Stock Market News from https://marketaux.com -- integrated by idlehands08 / Geoff
+  - Get and display recent  Stock Prices from  https://Stockdata.org -- integrated by idlehands08 / Geoff
+  - Get and display random jokes from https://sv443.net/jokeapi/v2/ -- integrated by kobato13 / JC
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -160,9 +179,9 @@ If you have a suggestion that would make this better, please fork the repo and c
 Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+2. Create your Feature Branch (`git checkout -b feature/NewFeature`)
+3. Commit your Changes (`git commit -m 'Add some NewFeatures'`)
+4. Push to the Branch (`git push origin feature/NewFeature`)
 5. Open a Pull Request
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -173,33 +192,8 @@ Don't forget to give the project a star! Thanks again!
 
 John Carlo Martinez - [LinkedIn](https://www.linkedin.com/in/john-carlo-martinez-18177314a/) - johncarlomartinez13@gmail.com
 
+Geoff Dagamac - geofftd08@gmail.com 
+
 Project Link: [https://github.com/idlehands08/stock-trading-app](https://github.com/idlehands08/stock-trading-app)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGMENTS -->
-
-## Acknowledgments
-
-- []()
-- []()
-- []()
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png

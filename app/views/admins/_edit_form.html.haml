@@ -14,7 +14,7 @@
           = f.text_field :email, class: 'rounded w-80', placeholder: "Email"
         %div{class: "flex flex-col gap-2"}
           %h1{class: 'text-sm text-white'}FIRST NAME
-          = f.text_field :first_name, class: 'rounded w-80', placeholder: "Email"
+          = f.text_field :first_name, class: 'rounded w-80', placeholder: "First Name"
         %div{class: "flex flex-col gap-2"}
           %h1{class: 'text-sm text-white'}LAST NAME
           = f.text_field :last_name, class: 'rounded w-80', placeholder: "Last Name"
@@ -22,5 +22,5 @@
           %div{class: "flex flex-col gap-2"}
             %h1{class: 'text-sm text-white'}BALANCE
             = f.number_field :balance, class: 'rounded w-80', value: @user.wallet.balance
-        %button{class:"mt-10 rounded bg-blue-500 px-5 py-2 w-full text-white font-bold cursor-pointer hover:opacity-50"}
-          = f.submit "Update Account"
+        %button{class:"mt-10 rounded bg-blue-500 px-5 py-2 w-full text-white font-bold transition-ease duration-200 cursor-pointer hover:opacity-50"}
+          = f.submit "Update Account", :class => "font-bold"
