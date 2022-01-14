@@ -1,58 +1,205 @@
-# Hi there 👋
+<div id="top"></div>
 
-This repo serves as the main repo for our Rails Projects. 
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/github_username/repo_name">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-#### Version
+<h3 align="center">project_title</h3>
+
+  <p align="center">
+    project_description
+    <br />
+    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    ·
+    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+  </p>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
+
+<!-- ABOUT THE PROJECT -->
+
+## About The Project
+
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
+
+This is a Stock Trading Application for educational purpose
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### Built With
+
+- [Ruby](https://www.ruby-lang.org/en/)
+- [Ruby on Rails](https://rubyonrails.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [JQuery](https://jquery.com)
+
+### Version
 
 ```
-  Ruby 2.7.2
-  Rails 6.0.3.4
-  NodeJS 12.18.3
+  Ruby 2.7.4
+  Rails 6.0.3.6
+  Nodejs 12.18.3
   Yarn 1.22.4
 ```
 
-#### Installation
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-Fork this repo:
-![image](https://user-images.githubusercontent.com/9253881/111437757-6c527f00-873e-11eb-8d0a-862e4158f4ab.png)
+<!-- GETTING STARTED -->
 
-Then, clone your forked repo to your machine
-```
-  $ git clone git@github.com:<username>/rails-base-project.git <name of your app>
-  $ cd <name of your app>
-```
+## Getting Started
 
-#### Setup
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
 
-```
-  $ bundle install
-  $ rake db:setup
-```
+### Prerequisites
 
-#### Starting the application
+This is an example of how to list things you need to use the software and how to install them.
 
-```
-  $ rails server
-```
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-#### How to run the test suite
+### Installation
 
-```
-  $ rspec
-```
+1. Clone the repo
+   ```sh
+   git clone https://github.com/idlehands08/stock-trading-app.git
+   ```
+2. Go to your folder and install all the bundles
+   ```js
+   cd stock-trading-app
+   bundle install
+   ```
+3. Installing yarn
+   ```js
+   yarn install --check files
+   ```
+4. Migration
+   ```js
+   rails db:migrate
+   rails db:seed
+   ```
+5. Start the server
+   ```js
+   rails server
+   ```
 
-#### How to run the Ruby Linter
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-```
-  $ rubocop
-```
+<!-- USAGE EXAMPLES -->
 
-#### How to enable Github Workflow
+## Screenshots
 
-<img width="906" alt="Screen Shot 2021-03-23 at 10 10 52 PM" src="https://user-images.githubusercontent.com/9253881/112160501-2fe2bf80-8c25-11eb-8e2b-b9508711ec70.png">
+![StockBro (1)](app/assets/images/finance.jpg)
 
-<img width="1244" alt="Screen Shot 2021-03-23 at 10 11 12 PM" src="https://user-images.githubusercontent.com/9253881/112160530-36713700-8c25-11eb-9f00-d69a3a36343f.png">
+_For more examples, please refer to the [Documentation](https://example.com)_
 
+<p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- ROADMAP -->
 
+## Roadmap
+
+- [] Feature 1
+- [] Feature 2
+- [] Feature 3
+  - [] Nested Feature
+
+See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- CONTACT -->
+
+## Contact
+
+John Carlo Martinez - [LinkedIn](https://www.linkedin.com/in/john-carlo-martinez-18177314a/) - johncarlomartinez13@gmail.com
+
+Project Link: [https://github.com/idlehands08/stock-trading-app](https://github.com/idlehands08/stock-trading-app)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGMENTS -->
+
+## Acknowledgments
+
+- []()
+- []()
+- []()
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
+[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
+[forks-url]: https://github.com/github_username/repo_name/network/members
+[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
+[stars-url]: https://github.com/github_username/repo_name/stargazers
+[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
+[issues-url]: https://github.com/github_username/repo_name/issues
+[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
+[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/linkedin_username
+[product-screenshot]: images/screenshot.png
