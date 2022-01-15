@@ -42,7 +42,7 @@ class StockHoldingsController < ApplicationController
       # only save if you have more than 0 balance
       @holding.save if @user_wallet.balance.positive?
       # for saving user's balance
-      if @holding.save
+      if @user_wallet.balance.positive? && @holding.save
         @user_wallet.save
         # create buy transaction for the user
         create_transaction_buy(@holding.units)
@@ -67,7 +67,7 @@ class StockHoldingsController < ApplicationController
       # only save if you have more than 0 balance
       @holding.save if @user_wallet.balance.positive?
       # updating user's balance
-      if @holding.save
+      if @user_wallet.balance.positive? && @holding.save
         @user_wallet.save
         # create buy transaction for the user
         create_transaction_buy(units)
