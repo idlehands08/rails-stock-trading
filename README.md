@@ -41,9 +41,9 @@ A basic stock trading application where users can imitate buying and selling of 
 
 #### ADMIN links
 
-#### link 1 - https://morning-lake-07067.herokuapp.com/admins/sign_in
+#### link 1 -https://robostockapp.herokuapp.com/admins/sign_in
 
-#### link 2 - https://damp-thicket-05193.herokuapp.com/admins/sign_in
+#### link 2 - https://morning-lake-07067.herokuapp.com/admins/sign_in
 
 #### Email: admin@test.com
 
